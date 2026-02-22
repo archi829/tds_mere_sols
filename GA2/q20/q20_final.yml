@@ -1,0 +1,18 @@
+﻿version: "2"
+authtoken: 3A2HOgDP97PwY5lMkHos108x9jI_wWQoNHFw6U6yhSCzxfoP
+region: us
+tunnels:
+  final-grader:
+    proto: http
+    addr: 11434
+    host_header: localhost:11434
+    traffic_policy:
+      on_http_response:
+        - actions:
+            - type: add-headers
+              config:
+                headers:
+                  X-Email: "23f3001889@ds.study.iitm.ac.in"
+                  Access-Control-Allow-Origin: "*"
+                  Access-Control-Allow-Headers: "*"
+                  Ngrok-Skip-Browser-Warning: "true"
