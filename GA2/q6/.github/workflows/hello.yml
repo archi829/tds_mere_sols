@@ -1,0 +1,16 @@
+name: Assignment Action  # Visible name in GitHub UI
+
+on: [push]  # Triggers on any push to the repo
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Free GitHub runner (kitchen station)
+    steps:
+      - name: Checkout code  # Step 1: Grab your repo files
+        uses: actions/checkout@v4  # Reusable action
+
+      - name: 23f3001889@ds.study.iitm.ac.in  # REQUIRED: Your email here
+        run: echo "Hello from my GitHub Action!"  # Simple command
+
+      - name: List files  # Bonus: Shows it worked
+        run: ls -la
